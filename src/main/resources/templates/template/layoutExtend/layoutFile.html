@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!--레이아웃을 사용하는 이유 : 예를들어 페이지가 100개정도 있는데, footer를 바꿔야하면 100개를 다 고치기 힘든데,-->
+<!--레이아웃이 있으면 컨텐츠 부분은 보호하고 나머지 부분들은 layout에서만 바꿔주면 됨-->
+<!--사이트가 좀 작으면 조각을 사용하기도 하는데, 중복이 좀 많음.-->
+<html th:fragment="layout (title, content)" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title th:replace="${title}">레이아웃 타이틀</title>
+</head>
+<body>
+<h1>레이아웃 H1</h1>
+<div th:replace="${content}">
+  <p>레이아웃 컨텐츠</p>
+</div>
+<footer>
+  레이아웃 푸터
+</footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>부분 포함</h1>
+<h2>부분 포함 insert</h2> <!--~은 조각 표현식. 파일경로에 fragment이름 선언-->
+<div th:insert="~{template/fragment/footer :: copy}"></div>  <!--insert : div 태그안에 가져온 조각을 넣겠다. -->
+<h2>부분 포함 replace</h2>
+<div th:replace="~{template/fragment/footer :: copy}"></div> <!--replace : 선언된 div 태그자체를 조각으로 교체하겠다. -->
+<h2>부분 포함 단순 표현식</h2>
+<div th:replace="template/fragment/footer :: copy"></div> <!--경로하고 이름정도만 있는 단순형식은 ~조각표현식 생략해도됨. 그러나 복잡한형식은 생략표현식을 못씀 -->
+<h1>파라미터 사용</h1>
+<div th:replace="~{template/fragment/footer :: copyParam ('데이터1', '데이터2')}"></div> <!--조각에 변수 사용 가능-->
+</body>
+</html>

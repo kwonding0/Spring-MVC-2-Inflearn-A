@@ -1,0 +1,10 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="common_header(title,links)">
+  <title th:replace="${title}">레이아웃 타이틀</title> <!--조각처럼 간단하게 변수들 정도만 넘기는게 아닌 html 태그자체를, 그니까 더 큰 부분을 넘기고 싶을 떄를 위한 레이아웃-->
+  <!-- 공통 -->
+  <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/awesomeapp.css}">
+  <link rel="shortcut icon" th:href="@{/images/favicon.ico}">
+  <script type="text/javascript" th:src="@{/sh/scripts/codebase.js}"></script>
+  <!-- 추가 -->
+  <th:block th:replace="${links}" />
+</head>

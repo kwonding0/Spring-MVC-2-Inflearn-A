@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>리터럴</h1> <!--리터럴은 소스 코드상에 고정된 값을 말하는 용어이다.--> <!--리터럴표기법이란, 변수를 선언함과 동시에 그 값을 지정해주는 표기법을 말한다.-->
+<ul>
+  <!--주의! 다음 주석을 풀면 예외가 발생함-->
+  <!-- <li>"hello world!" = <span th:text="hello world!"></span></li>-->
+  <li>'hello' + ' world!' = <span th:text="'hello' + ' world!'"></span></li>
+  <li>'hello world!' = <span th:text="'hello world!'"></span></li>
+  <li>'hello ' + ${data} = <span th:text="'hello ' + ${data}"></span></li>
+  <li>리터럴 대체 |hello ${data}| = <span th:text="|hello ${data}|"></span></li> <!--리터럴 대체 문법-->
+</ul>
+</body>
+</html>
